@@ -1,9 +1,9 @@
 FROM ubuntu
 
 COPY . .
-RUN apt install curl && \
-curl -sL https://apt.vapor.sh | sh && \
-apt install swift vapor && \
+RUN apt update && apt install -y wget software-properties-common && \
+wget -qO- https://apt.vapor.sh | bash && \
+apt install -y swift vapor && \
 vapor build
 
 EXPOSE 8080
