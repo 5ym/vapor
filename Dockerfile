@@ -1,5 +1,6 @@
 FROM ubuntu
 
+WORKDIR /opt/vapor
 COPY . .
 RUN apt update && apt install -y wget software-properties-common && \
 wget -qO- https://apt.vapor.sh | bash && \
