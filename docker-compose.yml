@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  vapor:
+    build: .
+    volumes: 
+      - "./vapor:/opt/vapor"
+    ports:
+      - "2080:8080"
